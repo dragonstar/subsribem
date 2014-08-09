@@ -1,6 +1,8 @@
 require_dependency "subscribem/application_controller"
 
 module Subscribem
-  class DashboardController < ApplicationController
+  class DashboardController < Subscribem::ApplicationController
+
+
   end
 end
