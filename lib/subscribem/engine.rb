@@ -4,8 +4,9 @@ module Subscribem
     require "warden"
     require "dynamic_form"
     require "subscribem/active_record_extensions"
-    require "apartment"
-    require "apartment/elevators/subdomain"
+    #require "apartment"
+    #require "apartment/elevators/subdomain"
+    require "houser"
 
     initializer "subscribem.middleware.warden" do
       Rails.application.config.middleware.use Warden::Manager do |manager|
@@ -20,8 +21,13 @@ module Subscribem
       end
     end
 
-    initializer "subscribem.middleware.apartment" do
-      Rails.application.config.middleware.use Apartment::Elevators::Subdomain
+    #initializer "subscribem.middleware.apartment" do
+    #  Rails.application.config.middleware.use Apartment::Elevators::Subdomain
+    #end
+
+    initializer 'subscribem.middleware.houser' do
+      Rails.application.config.middleware.use Houser::Middleware,
+         class_name: 'Subscribem::Account'
     end
 
     config.generators do |g|

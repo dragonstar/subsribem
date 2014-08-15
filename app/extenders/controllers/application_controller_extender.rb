@@ -1,7 +1,8 @@
 ::ApplicationController.class_eval do
   def current_account
     if user_signed_in?
-      @current_account ||= Subscribem::Account.find_by!(subdomain:request.subdomain)
+      #@current_account ||= Subscribem::Account.find_by!(subdomain:request.subdomain)
+      @current_account ||= env['X-Houser-Object']
     end
   end
   helper_method :curent_account

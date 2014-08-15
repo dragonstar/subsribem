@@ -1,3 +1,3 @@
-Apartment.excluded_models = ["Subscribem::Account",
-                            "Subscribem::Member",
-                            "Subscribem::User"]
+#Apartment.excluded_models = ["Subscribem::Account",
+#                            "Subscribem::Member",
+#                            "Subscribem::User"]
