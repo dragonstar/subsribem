@@ -1,3 +1,4 @@
 #Apartment.excluded_models = ["Subscribem::Account",
 #                            "Subscribem::Member",
-#                            "Subscribem::User"]
+#                            "Subscribem::User",
+#                            " Subscribem::Plan"]

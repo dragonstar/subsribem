@@ -7,6 +7,7 @@ module Subscribem
     #require "apartment"
     #require "apartment/elevators/subdomain"
     require "houser"
+    require "braintree"
 
     initializer "subscribem.middleware.warden" do
       Rails.application.config.middleware.use Warden::Manager do |manager|
